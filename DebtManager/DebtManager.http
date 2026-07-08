@@ -1,0 +1,6 @@
+@DebtManager_HostAddress = http://localhost:5017
+
+GET {{DebtManager_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

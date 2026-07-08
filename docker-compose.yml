@@ -1,0 +1,17 @@
+services:
+  debtmanager:
+    build: ./DebtManager
+    ports:
+      - "5017:5017"
+    volumes:
+      - debtmanager_data:/app/data
+
+  debtdashboard:
+    build: ./DebtDashboard
+    ports:
+      - "80:80"
+    depends_on:
+      - debtmanager
+
+volumes:
+  debtmanager_data:

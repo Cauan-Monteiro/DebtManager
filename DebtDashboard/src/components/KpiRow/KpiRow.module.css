@@ -1,0 +1,59 @@
+.row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  margin-bottom: 26px;
+}
+
+@media (max-width: 900px) {
+  .row {
+    grid-template-columns: 1fr;
+  }
+}
+
+.card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-card-border);
+  border-radius: 14px;
+  padding: 20px 22px;
+  display: flex;
+  gap: 16px;
+}
+
+.stripe {
+  width: 4px;
+  border-radius: 4px;
+  flex: 0 0 4px;
+}
+
+.stripeRevenue {
+  background: var(--color-positive-bar);
+}
+
+.stripeExpense {
+  background: var(--color-negative-bar);
+}
+
+.stripeAccent {
+  background: var(--color-accent);
+}
+
+.body {
+  flex: 1;
+  min-width: 0;
+}
+
+.label {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--color-text-faint);
+}
+
+.value {
+  font-size: 30px;
+  font-weight: 600;
+  color: var(--color-text-primary);
+  margin-top: 10px;
+}
